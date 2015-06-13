@@ -1,0 +1,16 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        "com.kiefer.gradle:ember-cli-gradle-plugin:0.0.1"
+    }
+}
+
+//apply plugin : "com.kiefer.gradle.embercli"
