@@ -5,3 +5,8 @@
 
 build
 .gradle
+
+tmp
+dist
+node_modules
+bower_components

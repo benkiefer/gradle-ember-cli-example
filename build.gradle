@@ -12,5 +12,14 @@ buildscript {
 }
 
 apply plugin: "com.kiefer.gradle.embercli"
+apply plugin: "idea"
+
+idea {
+    module {
+        excludeDirs += file('tmp')
+        excludeDirs += file('node_modules')
+        excludeDirs += file('bower_components')
+    }
+}
 
 
