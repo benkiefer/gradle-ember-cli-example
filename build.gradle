@@ -11,10 +11,11 @@ buildscript {
     }
 }
 
+group = "com.kiefer.gradle"
+version = "1.0.0"
+
 apply plugin: "com.kiefer.gradle.embercli"
 apply plugin: "idea"
-
-version = "1.0.0"
 
 idea {
     module {
