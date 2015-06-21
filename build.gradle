@@ -4,10 +4,10 @@ task wrapper(type: Wrapper) {
 
 buildscript {
     repositories {
-        mavenLocal()
+        jcenter()
     }
     dependencies {
-        classpath "com.kiefer.gradle:ember-cli-gradle-plugin:0.0.1"
+        classpath "com.kiefer.gradle:ember-cli-gradle-plugin:0.0.3"
     }
 }
 
