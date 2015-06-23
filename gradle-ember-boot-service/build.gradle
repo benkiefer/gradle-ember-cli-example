@@ -1,11 +1,29 @@
 apply plugin: 'spring-boot'
 
+configurations {
+    js
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile project(path: ":gradle-ember-ui", configuration: "js")
+    js project(path: ":gradle-ember-ui", configuration: "js")
 }
 
 mainClassName="com.kiefer.Application"
 
 sourceCompatibility = 1.8
+
+task unpackJsProjects(type: Copy) {
+    def zips = configurations.js.collect {
+        zipTree it
+    }
+
+    zips.each { zip ->
+        from zip
+        include "index.html"
+        into "src/main/resources/templates"
+    }
+}
+
+processResources.dependsOn "unpackJsProjects"
