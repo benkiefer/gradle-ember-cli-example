@@ -1,2 +1,5 @@
 rootProject.name = 'gradle-ember-cli-example'
 
+include 'gradle-ember-boot-service'
+include 'gradle-ember-ui'
+

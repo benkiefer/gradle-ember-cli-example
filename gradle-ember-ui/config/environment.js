@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'gradle-ember-cli-example',
+    modulePrefix: 'gradle-ember-ui',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

@@ -1,5 +1,5 @@
 {
-  "name": "gradle-ember-cli-example",
+  "name": "gradle-ember-ui",
   "dependencies": {
     "ember": "1.12.0",
     "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",

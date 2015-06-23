@@ -1,7 +1,7 @@
 {
-  "name": "gradle-ember-cli-example",
+  "name": "gradle-ember-ui",
   "version": "0.0.0",
-  "description": "Small description for gradle-ember-cli-example goes here",
+  "description": "Small description for gradle-ember-ui goes here",
   "private": true,
   "directories": {
     "doc": "doc",
