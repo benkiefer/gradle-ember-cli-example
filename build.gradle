@@ -7,10 +7,20 @@ buildscript {
         jcenter()
     }
     dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.4.RELEASE"
         classpath "com.kiefer.gradle:ember-cli-gradle-plugin:0.0.3"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
     }
 }
 
 group = "com.kiefer.gradle"
 version = "1.0.0"
+
+
 
