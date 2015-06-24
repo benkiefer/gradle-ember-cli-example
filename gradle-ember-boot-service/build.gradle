@@ -1,5 +1,9 @@
 apply plugin: 'spring-boot'
 
+clean {
+    "src/main/resources/templates/index.html"
+}
+
 configurations {
     js
 }
@@ -10,20 +14,26 @@ dependencies {
     js project(path: ":gradle-ember-ui", configuration: "js")
 }
 
-mainClassName="com.kiefer.Application"
+mainClassName = "com.kiefer.Application"
 
 sourceCompatibility = 1.8
 
-task unpackJsProjects(type: Copy) {
+task unpackJsProjects(type: Copy, dependsOn: configurations.js.buildDependencies) {
     def zips = configurations.js.collect {
         zipTree it
     }
 
-    zips.each { zip ->
-        from zip
+    from zips, {
         include "index.html"
-        into "src/main/resources/templates"
+        into "templates"
     }
+
+    from zips, {
+        include "assets/**"
+        into "static"
+    }
+
+    destinationDir new File("$project.projectDir/src/main/resources")
 }
 
 processResources.dependsOn "unpackJsProjects"
