@@ -1,7 +1,8 @@
 apply plugin: 'spring-boot'
 
 clean {
-    "src/main/resources/templates/index.html"
+    delete "src/main/resources/templates/index.html"
+    delete "src/main/resources/static/assets"
 }
 
 configurations {
