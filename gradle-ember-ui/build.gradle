@@ -8,4 +8,3 @@ idea {
         excludeDirs += file('bower_components')
     }
 }
-
