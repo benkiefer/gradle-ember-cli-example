@@ -5,10 +5,11 @@ task wrapper(type: Wrapper) {
 buildscript {
     repositories {
         jcenter()
+        mavenLocal()
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:1.2.4.RELEASE"
-        classpath "com.kiefer.gradle:ember-cli-gradle-plugin:1.0.1"
+        classpath "com.kiefer.gradle:ember-cli-gradle-plugin:1.0.2"
     }
 }
 
