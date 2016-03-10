@@ -15,8 +15,6 @@ dependencies {
     js project(path: ":gradle-ember-ui", configuration: "js")
 }
 
-mainClassName = "com.kiefer.Application"
-
 sourceCompatibility = 1.8
 
 task unpackJsProjects(type: Copy, dependsOn: configurations.js.buildDependencies) {
