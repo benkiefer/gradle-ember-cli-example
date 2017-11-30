@@ -13,6 +13,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     js project(path: ":gradle-ember-ui", configuration: "js")
+    compile("net.sourceforge.nekohtml:nekohtml:1.9.22")
 }
 
 sourceCompatibility = 1.8
