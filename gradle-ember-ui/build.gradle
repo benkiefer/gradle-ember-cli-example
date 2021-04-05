@@ -1,4 +1,4 @@
-apply plugin: "com.kiefer.gradle.embercli"
+apply plugin: "io.github.benkiefer.embercli"
 apply plugin: "idea"
 
 idea {

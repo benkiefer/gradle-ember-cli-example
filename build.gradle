@@ -1,5 +1,5 @@
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.3.1'
+    gradleVersion = '4.10.2'
 }
 
 buildscript {
@@ -8,7 +8,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath "com.kiefer.gradle:ember-cli-gradle-plugin:4.0.0"
+        classpath "io.github.benkiefer:ember-cli-gradle-plugin:5.0.0"
         classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE"
     }
 }
@@ -20,5 +20,5 @@ allprojects {
     }
 }
 
-group = "com.kiefer.gradle"
+group = "io.github.benkiefer"
 version = "1.0.0"
